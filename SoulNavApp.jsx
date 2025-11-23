@@ -47,10 +47,13 @@ const SoulNavApp = () => {
           <div className="content-section">
             <h2>Contact Us</h2>
             <p>Get in touch with the Soul team</p>
-            <form className="contact-form">
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your Email" />
-              <textarea placeholder="Your Message"></textarea>
+            <form className="contact-form" onSubmit={(e) => { e.preventDefault(); alert('Thank you for your message! We will get back to you soon.'); e.target.reset(); }}>
+              <label htmlFor="contact-name" style={{ display: 'none' }}>Your Name</label>
+              <input id="contact-name" type="text" placeholder="Your Name" aria-label="Your Name" required />
+              <label htmlFor="contact-email" style={{ display: 'none' }}>Your Email</label>
+              <input id="contact-email" type="email" placeholder="Your Email" aria-label="Your Email" required />
+              <label htmlFor="contact-message" style={{ display: 'none' }}>Your Message</label>
+              <textarea id="contact-message" placeholder="Your Message" aria-label="Your Message" required></textarea>
               <button type="submit">Send Message</button>
             </form>
           </div>
