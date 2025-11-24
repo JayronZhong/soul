@@ -219,7 +219,6 @@ const getWisdomCards = (lang) => {
       "Peace is the best gift you can give yourself."
     ];
   }
-  // Default to zh-TW / zh-CN (simplification can be done via regex if needed, but here we reuse TW for simplicity or separate if strictly needed)
   if (lang === 'zh-CN') {
      return [
       "每一次深呼吸，都是一次新的开始。",
@@ -880,7 +879,7 @@ export default function SoulNavApp() {
             onClick={toggleViewMode}
             className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-medium border border-white/10 transition-all"
          >
-            <Monitor size={16} /> {texts.mobile.switchToDesktop}
+            <Monitor size={16} /> {texts.sidebar.switchToDesktop}
          </button>
       </div>
 
